@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Overview — Xian Legends GDD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {--imperial-gold:#d4af37;--celestial-blue:#3498db;--dark-night:#0f0f23;--cloud-white:#ecf0f1;--gold-glow:rgba(212,175,55,0.4);--font-display:'Cinzel',serif;--font-body:'Inter',sans-serif}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:var(--font-body);background:linear-gradient(135deg,#0f0f23 0%,#1a1a2e 50%,#16213e 100%);color:#333;line-height:1.6;font-size:16px}
+        .nav-bar{background:rgba(15,15,35,0.95);backdrop-filter:blur(10px);padding:12px 16px;position:sticky;top:0;z-index:1000;border-bottom:2px solid var(--imperial-gold)}
+        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
+        .nav-title{font-family:var(--font-display);color:var(--imperial-gold);font-size:1em}
+        .nav-back{color:white;text-decoration:none;padding:8px 14px;background:var(--celestial-blue);border-radius:6px;font-size:0.9em;font-weight:600;white-space:nowrap;transition:all 0.3s ease}
+        .nav-back:hover{background:#2980b9}
+        .header{text-align:center;padding:32px 16px 24px;background:rgba(0,0,0,0.3)}
+        .header-title{font-family:var(--font-display);font-size:clamp(1.8em,7vw,3em);color:var(--imperial-gold);margin-bottom:8px;text-shadow:0 0 30px var(--gold-glow)}
+        .header-subtitle{font-size:clamp(0.9em,3vw,1.2em);color:var(--cloud-white);opacity:0.9}
+        .container{max-width:1200px;margin:0 auto;padding:24px 16px 60px}
+        .section{background:white;border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,0.2)}
+        .section-title{font-family:var(--font-display);font-size:1.5em;color:var(--dark-night);margin-bottom:16px;padding-bottom:12px;border-bottom:3px solid var(--imperial-gold);display:flex;align-items:center;gap:10px}
+        .info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:16px 0}
+        .info-card{background:#f8f9fa;border-left:4px solid var(--imperial-gold);padding:12px;border-radius:6px}
+        .info-label{font-size:0.85em;color:#666;font-weight:600;margin-bottom:4px}
+        .info-value{font-size:1.05em;color:#333;font-weight:600}
+        ul{margin:12px 0;padding-left:24px}
+        li{margin:8px 0;color:#555}
+        strong{color:var(--celestial-blue)}
+        p{margin-bottom:12px;line-height:1.7;color:#555}
+        .footer{text-align:center;padding:32px 16px;border-top:2px solid rgba(212,175,55,0.3);margin-top:40px;background:rgba(0,0,0,0.2)}
+        .footer-title{font-family:var(--font-display);color:var(--imperial-gold);font-size:1.3em;margin-bottom:12px}
+        .footer a{color:var(--celestial-blue);text-decoration:none}
+        @media (min-width:600px){.info-grid{grid-template-columns:repeat(3,1fr)}.section{padding:32px}}
+    </style>
+</head>
+<body>
+    <nav class="nav-bar"><div class="nav-container"><div class="nav-title">Game Overview</div><a href="../core-foundation.html" class="nav-back">← Core Foundation</a></div></nav>
+    <header class="header"><h1 class="header-title">Game Overview</h1><p class="header-subtitle">Genre, Gameplay & Core Loop</p></header>
+    <div class="container">
+        <section class="section">
+            <h2 class="section-title"><span>🎮</span> Genre Classification</h2>
+            <div class="info-grid">
+                <div class="info-card"><div class="info-label">Primary</div><div class="info-value">Tactical JRPG</div></div>
+                <div class="info-card"><div class="info-label">Subgenre</div><div class="info-value">Friendship Sim</div></div>
+                <div class="info-card"><div class="info-label">Gameplay</div><div class="info-value">Grid-Based Combat</div></div>
+                <div class="info-card"><div class="info-label">Setting</div><div class="info-value">Chinese Mythology</div></div>
+                <div class="info-card"><div class="info-label">Tone</div><div class="info-value">Lighthearted</div></div>
+                <div class="info-card"><div class="info-label">Length</div><div class="info-value">20 Hours</div></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span>⚔️</span> Core Gameplay Loop</h2>
+            <p><strong>Explore → Bond → Battle → Cultivate → Progress</strong></p>
+            <ul>
+                <li><strong>Explore:</strong> Navigate world map, discover locations, trigger story events</li>
+                <li><strong>Bond:</strong> Character conversations at Base Camp, unlock Guardian abilities</li>
+                <li><strong>Battle:</strong> Grid-based tactical combat with friendship mechanics</li>
+                <li><strong>Cultivate:</strong> Strengthen all three heroes simultaneously through meditation</li>
+                <li><strong>Progress:</strong> Advance story, unlock new areas and abilities</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span>📊</span> Session Structure</h2>
+            <p><strong>Typical Play Session (1-2 hours):</strong></p>
+            <ul>
+                <li>Story cutscene (5-10 min)</li>
+                <li>Base Camp bonding (10-15 min)</li>
+                <li>Exploration & discovery (15-20 min)</li>
+                <li>Combat encounter (10-15 min)</li>
+                <li>Cultivation & progression (10 min)</li>
+            </ul>
+            <p style="margin-top:16px"><strong>Pacing:</strong> Balanced between story, combat, and downtime. Players control pace through optional content.</p>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title"><span>🎯</span> Player Experience</h2>
+            <p><strong>What Makes It Special:</strong></p>
+            <ul>
+                <li>Friendship powers ALL mechanics—not just narrative flavor</li>
+                <li>No solo grinding—heroes always progress together</li>
+                <li>Tactical depth without punishing difficulty</li>
+                <li>Cozy moments between epic battles</li>
+                <li>Respectful of player time—no padding or filler</li>
+            </ul>
+        </section>
+    </div>
+    <footer class="footer"><div class="footer-title">✦ XIAN LEGENDS ✦</div><p style="margin-top:12px;color:var(--cloud-white);opacity:0.8">Game Overview • Core Foundation</p><p style="margin-top:20px"><a href="../core-foundation.html">← Back to Core Foundation</a></p></footer>
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Summary — Xian Legends GDD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --imperial-gold: #d4af37;
+            --celestial-blue: #3498db;
+            --dragon-teal: #1abc9c;
+            --dark-night: #0f0f23;
+            --cloud-white: #ecf0f1;
+            --gold-glow: rgba(212, 175, 55, 0.4);
+            
+            --font-display: 'Cinzel', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-body);
+            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+            color: #333;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        /* Navigation */
+        .nav-bar {
+            background: rgba(15, 15, 35, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 12px 16px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--imperial-gold);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-title {
+            font-family: var(--font-display);
+            color: var(--imperial-gold);
+            font-size: 1em;
+        }
+
+        .nav-back {
+            color: white;
+            text-decoration: none;
+            padding: 8px 14px;
+            background: var(--celestial-blue);
+            border-radius: 6px;
+            font-size: 0.9em;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+
+        .nav-back:hover {
+            background: #2980b9;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 32px 16px 24px;
+            background: rgba(0,0,0,0.3);
+        }
+
+        .header-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.8em, 7vw, 3em);
+            color: var(--imperial-gold);
+            margin-bottom: 8px;
+            text-shadow: 0 0 30px var(--gold-glow);
+        }
+
+        .header-subtitle {
+            font-size: clamp(0.9em, 3vw, 1.2em);
+            color: var(--cloud-white);
+            opacity: 0.9;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 24px 16px 60px;
+        }
+
+        /* Section */
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 1.5em;
+            color: var(--dark-night);
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid var(--imperial-gold);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-icon {
+            font-size: 1.2em;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin: 20px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(52,152,219,0.1));
+            border: 2px solid rgba(212,175,55,0.3);
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: var(--font-display);
+            font-size: 2.5em;
+            color: var(--imperial-gold);
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.85em;
+            color: #666;
+            margin-top: 6px;
+            font-weight: 600;
+        }
+
+        /* Vision Box */
+        .vision-box {
+            background: linear-gradient(135deg, rgba(255,215,0,0.1), rgba(52,152,219,0.1));
+            border: 2px solid var(--imperial-gold);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+
+        .vision-text {
+            font-family: var(--font-display);
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #333;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* Logline Box */
+        .logline-box {
+            background: linear-gradient(135deg, var(--celestial-blue), var(--dragon-teal));
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 16px 0;
+        }
+
+        .logline-text {
+            font-size: 1.15em;
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Compact Pillars */
+        .pillars-compact {
+            display: grid;
+            gap: 16px;
+            margin: 16px 0;
+        }
+
+        .pillar {
+            background: #f8f9fa;
+            border-left: 4px solid var(--imperial-gold);
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .pillar-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .pillar-icon {
+            font-size: 1.8em;
+        }
+
+        .pillar-title {
+            font-family: var(--font-display);
+            font-size: 1.2em;
+            color: var(--dark-night);
+            font-weight: 600;
+        }
+
+        .pillar-desc {
+            font-size: 0.95em;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* List */
+        ul {
+            margin: 12px 0;
+            padding-left: 24px;
+        }
+
+        li {
+            margin: 8px 0;
+            color: #555;
+        }
+
+        strong {
+            color: var(--celestial-blue);
+        }
+
+        p {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .lead {
+            font-size: 1.05em;
+            line-height: 1.8;
+            padding: 16px;
+            background: rgba(212,175,55,0.05);
+            border-left: 4px solid var(--imperial-gold);
+            border-radius: 6px;
+            margin-bottom: 16px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 32px 16px;
+            border-top: 2px solid rgba(212,175,55,0.3);
+            margin-top: 40px;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .footer-title {
+            font-family: var(--font-display);
+            color: var(--imperial-gold);
+            font-size: 1.3em;
+            margin-bottom: 12px;
+        }
+
+        .footer a {
+            color: var(--celestial-blue);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #2980b9;
+        }
+
+        /* Tablet+ */
+        @media (min-width: 600px) {
+            .header {
+                padding: 48px 24px 32px;
+            }
+
+            .section {
+                padding: 32px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 16px;
+            }
+
+            .pillars-compact {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        /* Desktop */
+        @media (min-width: 1024px) {
+            .pillars-compact {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <div class="nav-title">Executive Summary</div>
+            <a href="../core-foundation.html" class="nav-back">← Core Foundation</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <h1 class="header-title">Executive Summary & Vision</h1>
+        <p class="header-subtitle">"Together. Always Together."</p>
+    </header>
+
+    <!-- Container -->
+    <div class="container">
+
+        <!-- Overview -->
+        <section class="section">
+            <p class="lead">
+                <strong>Xian Legends</strong> is a friendship-powered tactical JRPG where bonds between companions aren't just narrative—they are the most powerful mechanic. Set in a world inspired by Chinese mythology, three heroes discover that their friendship creates tangible power.
+            </p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">6</div>
+                    <div class="stat-label">Months</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Heroes</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">6</div>
+                    <div class="stat-label">Chapters</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">12</div>
+                    <div class="stat-label">Systems</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="section-icon">🌟</span>
+                Vision Statement
+            </h2>
+
+            <div class="vision-box">
+                <p class="vision-text">
+                    Xian Legends proves that friendship is the foundation of power itself. Your greatest strength comes not from grinding or legendary weapons, but from unbreakable bonds between three people who refuse to face darkness alone.
+                </p>
+            </div>
+
+            <p><strong>Key Systems:</strong></p>
+            <ul>
+                <li><strong>Tactical Combat</strong> rewards positioning heroes near each other</li>
+                <li><strong>Cultivation</strong> strengthens all three heroes simultaneously</li>
+                <li><strong>Guardian Relics</strong> unlock through deepening bonds</li>
+                <li><strong>Base Camp</strong> grants benefits from character interactions</li>
+            </ul>
+        </section>
+
+        <!-- Logline -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="section-icon">⚡</span>
+                Logline
+            </h2>
+
+            <div class="logline-box">
+                <p class="logline-text">
+                    Three unlikely heroes discover their friendship creates literal power in a world where bonds can summon ancient Chinese guardians and turn connection into the strongest magic of all.
+                </p>
+            </div>
+
+            <p style="text-align: center; font-size: 1.1em; font-weight: 600; color: var(--celestial-blue); margin-top: 16px;">
+                Fire Emblem's tactics + Persona's bonds + Stardew's warmth
+            </p>
+        </section>
+
+        <!-- Design Pillars -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="section-icon">💎</span>
+                Design Pillars
+            </h2>
+
+            <div class="pillars-compact">
+                <div class="pillar">
+                    <div class="pillar-header">
+                        <div class="pillar-icon">🤝</div>
+                        <h3 class="pillar-title">Friendship as Power</h3>
+                    </div>
+                    <p class="pillar-desc">
+                        Relationships translate into mechanical advantages through proximity bonuses, shared cultivation, and Guardian summons.
+                    </p>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-header">
+                        <div class="pillar-icon">⚔️</div>
+                        <h3 class="pillar-title">Tactical Without Stress</h3>
+                    </div>
+                    <p class="pillar-desc">
+                        Strategic combat that rewards planning but doesn't punish. No permadeath, no irreversible mistakes.
+                    </p>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-header">
+                        <div class="pillar-icon">🏡</div>
+                        <h3 class="pillar-title">Cozy Exploration</h3>
+                    </div>
+                    <p class="pillar-desc">
+                        Safe spaces to breathe between battles. Base building, character moments, and calm progression.
+                    </p>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-header">
+                        <div class="pillar-icon">🌟</div>
+                        <h3 class="pillar-title">Wonder Over Cynicism</h3>
+                    </div>
+                    <p class="pillar-desc">
+                        Lighthearted tone that celebrates hope, kindness, and joy without being trivial or childish.
+                    </p>
+                </div>
+
+                <div class="pillar">
+                    <div class="pillar-header">
+                        <div class="pillar-icon">🎯</div>
+                        <h3 class="pillar-title">Respect Player Time</h3>
+                    </div>
+                    <p class="pillar-desc">
+                        Tight 20-hour campaign, quick battles, no grinding, clear progression goals.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Target & Platform -->
+        <section class="section">
+            <h2 class="section-title">
+                <span class="section-icon">🎯</span>
+                Target & Platform
+            </h2>
+
+            <p><strong>Primary Audience:</strong> JRPG enthusiasts (18-35) who value character relationships and strategic depth without punishing difficulty.</p>
+
+            <p><strong>Secondary:</strong> Cozy game players seeking structured gameplay, tactical RPG fans wanting emotional narratives.</p>
+
+            <p style="margin-top: 16px;"><strong>Platform:</strong></p>
+            <ul>
+                <li>PC (Steam/Epic/GOG) at launch</li>
+                <li>$9.99 USD premium purchase</li>
+                <li>No microtransactions or required DLC</li>
+                <li>Console ports planned post-launch</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-title">✦ XIAN LEGENDS ✦</div>
+        <p style="margin-top: 12px; color: var(--cloud-white); opacity: 0.8;">
+            Executive Summary • Core Foundation
+        </p>
+        <p style="margin-top: 20px;">
+            <a href="../core-foundation.html">← Back to Core Foundation</a>
+        </p>
+    </footer>
+
+</body>
+</html>
