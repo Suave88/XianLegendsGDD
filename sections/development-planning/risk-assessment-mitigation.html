@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Assessment — Xian Legends GDD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--imperial-gold:#d4af37;--phoenix-red:#e74c3c;--celestial-blue:#3498db;--mystic-purple:#9b59b6;--dark-night:#0f0f23;--cloud-white:#ecf0f1;--gold-glow:rgba(212,175,55,0.4);--font-display:'Cinzel',serif;--font-body:'Inter',sans-serif}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:var(--font-body);background:linear-gradient(135deg,#0f0f23 0%,#1a1a2e 50%,#16213e 100%);color:#333;line-height:1.6;font-size:16px}
+        .nav-bar{background:rgba(15,15,35,0.95);backdrop-filter:blur(10px);padding:12px 16px;position:sticky;top:0;z-index:1000;border-bottom:2px solid var(--imperial-gold)}
+        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
+        .nav-title{font-family:var(--font-display);color:var(--imperial-gold);font-size:1em}
+        .nav-back{color:white;text-decoration:none;padding:8px 14px;background:var(--celestial-blue);border-radius:6px;font-size:0.9em;font-weight:600;white-space:nowrap;transition:all 0.3s ease}
+        .nav-back:hover{background:#2980b9}
+        .header{text-align:center;padding:32px 16px 24px;background:rgba(0,0,0,0.3)}
+        .header-title{font-family:var(--font-display);font-size:clamp(1.8em,7vw,3em);color:var(--imperial-gold);margin-bottom:8px;text-shadow:0 0 30px var(--gold-glow)}
+        .header-subtitle{font-size:clamp(0.9em,3vw,1.2em);color:var(--cloud-white);opacity:0.9}
+        .container{max-width:1200px;margin:0 auto;padding:24px 16px 60px}
+        .section{background:white;border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,0.2)}
+        .section-title{font-family:var(--font-display);font-size:1.3em;color:var(--dark-night);margin-bottom:16px;padding-bottom:8px;border-bottom:3px solid var(--imperial-gold)}
+        .risk{background:#f8f9fa;border-left:4px solid var(--phoenix-red);padding:12px;margin:12px 0;border-radius:6px}
+        .risk h4{font-family:var(--font-display);font-size:1.1em;color:var(--dark-night);margin-bottom:6px}
+        .risk p{font-size:0.95em;color:#555;line-height:1.7}
+        .risk strong{color:var(--phoenix-red)}
+        .footer{text-align:center;padding:32px 16px;border-top:2px solid rgba(155,89,182,0.3);margin-top:40px;background:rgba(0,0,0,0.2)}
+        .footer-title{font-family:var(--font-display);color:var(--imperial-gold);font-size:1.3em;margin-bottom:12px}
+        .footer a{color:var(--celestial-blue);text-decoration:none}
+        @media (min-width:600px){.section{padding:32px}}
+    </style>
+</head>
+<body>
+    <nav class="nav-bar"><div class="nav-container"><div class="nav-title">Risk Assessment</div><a href="../development-planning.html" class="nav-back">← Development Planning</a></div></nav>
+    <header class="header"><h1 class="header-title">Risk Assessment</h1><p class="header-subtitle">Identified Risks & Mitigation</p></header>
+    <div class="container">
+
+        <div class="section">
+            <h2 class="section-title">⚠️ Technical Risks</h2>
+            
+            <div class="risk"><h4>Plugin Conflicts</h4><p><strong>Risk:</strong> VisuStella + SRPG Gear MZ conflicts breaking combat<br><strong>Impact:</strong> High (core gameplay affected)<br><strong>Mitigation:</strong> Test plugin compatibility in Phase 1, maintain backup builds, community forum support</p></div>
+            
+            <div class="risk"><h4>Performance Issues</h4><p><strong>Risk:</strong> Battle grid calculations slow on low-end PCs<br><strong>Impact:</strong> Medium (user experience)<br><strong>Mitigation:</strong> Optimize grid pathfinding, limit particle effects, include performance settings</p></div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🎮 Design Risks</h2>
+            
+            <div class="risk"><h4>Combat Balance</h4><p><strong>Risk:</strong> Battles too easy or too hard<br><strong>Impact:</strong> High (affects fun factor)<br><strong>Mitigation:</strong> Extensive Phase 5 playtesting, adjustable difficulty, QA feedback loops</p></div>
+            
+            <div class="risk"><h4>Scope Creep</h4><p><strong>Risk:</strong> Adding features beyond 6-12 hour scope<br><strong>Impact:</strong> High (delays release)<br><strong>Mitigation:</strong> Strict feature lockdown after Phase 3, prioritize core experience</p></div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📅 Schedule Risks</h2>
+            
+            <div class="risk"><h4>Asset Delays</h4><p><strong>Risk:</strong> Character art/music not ready on time<br><strong>Impact:</strong> Medium (delays polish)<br><strong>Mitigation:</strong> Early contractor agreements, placeholder assets, buffer time in Phase 6</p></div>
+            
+            <div class="risk"><h4>Testing Underestimation</h4><p><strong>Risk:</strong> More bugs than expected in Phase 5<br><strong>Impact:</strong> Medium (extends timeline)<br><strong>Mitigation:</strong> Allocate full month for testing, prioritize critical bugs, early alpha testing</p></div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">💰 Budget Risks</h2>
+            
+            <div class="risk"><h4>Unexpected Costs</h4><p><strong>Risk:</strong> Additional plugin/asset purchases needed<br><strong>Impact:</strong> Low (manageable with contingency)<br><strong>Mitigation:</strong> 20% budget buffer, prioritize free/owned assets, negotiate contractor rates early</p></div>
+        </div>
+
+    </div>
+    <footer class="footer"><div class="footer-title">✦ XIAN LEGENDS ✦</div><p style="margin-top:12px;color:var(--cloud-white);opacity:0.8">Risk Assessment • Development Planning</p><p style="margin-top:20px"><a href="../development-planning.html">← Back to Development Planning</a></p></footer>
+</body>
+</html>

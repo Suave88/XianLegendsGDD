@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Log & Version History — Xian Legends GDD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--imperial-gold:#d4af37;--jade-green:#00a86b;--celestial-blue:#3498db;--mystic-purple:#9b59b6;--phoenix-red:#e74c3c;--dark-night:#0f0f23;--cloud-white:#ecf0f1;--gold-glow:rgba(212,175,55,0.4);--font-display:'Cinzel',serif;--font-body:'Inter',sans-serif}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:var(--font-body);background:linear-gradient(135deg,#0f0f23 0%,#1a1a2e 50%,#16213e 100%);color:#333;line-height:1.6;font-size:16px}
+        .nav-bar{background:rgba(15,15,35,0.95);backdrop-filter:blur(10px);padding:12px 16px;position:sticky;top:0;z-index:1000;border-bottom:2px solid var(--imperial-gold)}
+        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
+        .nav-title{font-family:var(--font-display);color:var(--imperial-gold);font-size:1em}
+        .nav-back{color:white;text-decoration:none;padding:8px 14px;background:var(--celestial-blue);border-radius:6px;font-size:0.9em;font-weight:600;white-space:nowrap;transition:all 0.3s ease}
+        .nav-back:hover{background:#2980b9}
+        .header{text-align:center;padding:32px 16px 24px;background:rgba(0,0,0,0.3)}
+        .header-title{font-family:var(--font-display);font-size:clamp(1.8em,7vw,3em);color:var(--imperial-gold);margin-bottom:8px;text-shadow:0 0 30px var(--gold-glow)}
+        .header-subtitle{font-size:clamp(0.9em,3vw,1.2em);color:var(--cloud-white);opacity:0.9}
+        .container{max-width:1200px;margin:0 auto;padding:24px 16px 60px}
+        .section{background:white;border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,0.2)}
+        .section-title{font-family:var(--font-display);font-size:1.3em;color:var(--dark-night);margin-bottom:16px;padding-bottom:8px;border-bottom:3px solid var(--imperial-gold)}
+        .version{background:#f8f9fa;border-left:4px solid var(--jade-green);padding:12px;margin:12px 0;border-radius:6px}
+        .version.current{border-left-color:var(--imperial-gold);background:rgba(212,175,55,0.05)}
+        .version.future{border-left-color:var(--mystic-purple);background:rgba(155,89,182,0.05)}
+        .version-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;flex-wrap:wrap;gap:8px}
+        .version-number{font-family:var(--font-display);font-size:1.2em;color:var(--dark-night);font-weight:bold}
+        .version-date{font-size:0.9em;color:#777;font-style:italic}
+        .version-type{padding:4px 10px;border-radius:12px;font-size:0.75em;font-weight:600;text-transform:uppercase;letter-spacing:0.3px}
+        .version-type.gdd{background:rgba(52,152,219,0.2);color:var(--celestial-blue)}
+        .version-type.game{background:rgba(231,76,60,0.2);color:var(--phoenix-red)}
+        .version-type.current{background:rgba(212,175,55,0.2);color:var(--imperial-gold)}
+        .version-changes{font-size:0.95em;color:#555}
+        .version-changes ul{list-style:none;padding-left:0;margin-top:8px}
+        .version-changes li{padding:4px 0;padding-left:20px;position:relative}
+        .version-changes li:before{content:'•';position:absolute;left:0;color:var(--jade-green);font-weight:bold}
+        .version-changes li.removed:before{color:var(--phoenix-red)}
+        .version-changes li.changed:before{color:var(--celestial-blue)}
+        .footer{text-align:center;padding:32px 16px;border-top:2px solid rgba(155,89,182,0.3);margin-top:40px;background:rgba(0,0,0,0.2)}
+        .footer-title{font-family:var(--font-display);color:var(--imperial-gold);font-size:1.3em;margin-bottom:12px}
+        .footer a{color:var(--celestial-blue);text-decoration:none}
+        @media (min-width:600px){.section{padding:32px}}
+    </style>
+</head>
+<body>
+    <nav class="nav-bar"><div class="nav-container"><div class="nav-title">Change Log & Version History</div><a href="../development-planning.html" class="nav-back">← Development Planning</a></div></nav>
+    <header class="header"><h1 class="header-title">Change Log</h1><p class="header-subtitle">Version History & Updates</p></header>
+    <div class="container">
+
+        <div class="section">
+            <h2 class="section-title">📝 GDD Version History</h2>
+            
+            <div class="version current">
+                <div class="version-header">
+                    <div class="version-number">v1.0.0</div>
+                    <div style="display:flex;gap:8px;align-items:center">
+                        <span class="version-type gdd">GDD</span>
+                        <span class="version-type current">Current</span>
+                    </div>
+                    <div class="version-date">December 2025</div>
+                </div>
+                <div class="version-changes">
+                    <strong>Complete GDD Release — Mobile-First Design</strong>
+                    <ul>
+                        <li>✅ Core Foundation section (6 documents)</li>
+                        <li>✅ Narrative & World section (7 documents)</li>
+                        <li>✅ Gameplay Systems section (9 documents + database)</li>
+                        <li>✅ Development Planning section (6 documents)</li>
+                        <li>✅ Mobile-first responsive design (320px+)</li>
+                        <li>✅ Cinzel premium theme throughout</li>
+                        <li>✅ 60% content reduction for clarity</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="version">
+                <div class="version-header">
+                    <div class="version-number">v0.9.0</div>
+                    <div><span class="version-type gdd">GDD</span></div>
+                    <div class="version-date">November 2025</div>
+                </div>
+                <div class="version-changes">
+                    <strong>Major Revisions & Corrections</strong>
+                    <ul>
+                        <li class="changed">Changed game duration: 20 hours → 6-12 hours</li>
+                        <li class="changed">Updated competitor: Fire Emblem → Disgaea</li>
+                        <li class="changed">Improved competitive analysis readability</li>
+                        <li>Added complete Narrative & World section</li>
+                        <li>Added UI Controls & Tutorial documents</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="version">
+                <div class="version-header">
+                    <div class="version-number">v0.5.0</div>
+                    <div><span class="version-type gdd">GDD</span></div>
+                    <div class="version-date">October 2025</div>
+                </div>
+                <div class="version-changes">
+                    <strong>Initial GDD Draft</strong>
+                    <ul>
+                        <li>Core Foundation documents created</li>
+                        <li>Basic story outline completed</li>
+                        <li>Gameplay systems defined</li>
+                        <li>Development roadmap established</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🎮 Game Version History (Post-Launch)</h2>
+            
+            <div class="version future">
+                <div class="version-header">
+                    <div class="version-number">v1.2.0</div>
+                    <div><span class="version-type game">Game</span></div>
+                    <div class="version-date">Planned: 12 months post-launch</div>
+                </div>
+                <div class="version-changes">
+                    <strong>DLC 2: "Legends of Xian"</strong>
+                    <ul>
+                        <li>Prequel story chapter (Ayane's past)</li>
+                        <li>Alternate party members</li>
+                        <li>Challenge dungeon</li>
+                        <li>New Guardian Relic cosmetics</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="version future">
+                <div class="version-header">
+                    <div class="version-number">v1.1.0</div>
+                    <div><span class="version-type game">Game</span></div>
+                    <div class="version-date">Planned: 6 months post-launch</div>
+                </div>
+                <div class="version-changes">
+                    <strong>DLC 1: "New Horizons"</strong>
+                    <ul>
+                        <li>2-3 hour epilogue chapter</li>
+                        <li>New Guardian: Qilin</li>
+                        <li>5 bonus side quests</li>
+                        <li>Additional Base Camp furniture</li>
+                        <li>New Game+ mode (free)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="version future">
+                <div class="version-header">
+                    <div class="version-number">v1.0.3</div>
+                    <div><span class="version-type game">Game</span></div>
+                    <div class="version-date">Planned: 3 months post-launch</div>
+                </div>
+                <div class="version-changes">
+                    <strong>Major Update — Quality of Life</strong>
+                    <ul>
+                        <li>Additional difficulty levels</li>
+                        <li>Skip cutscene option for repeat players</li>
+                        <li>Quick save/load improvements</li>
+                        <li>Cosmetic furniture pack (free)</li>
+                        <li>Balance adjustments based on feedback</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="version future">
+                <div class="version-header">
+                    <div class="version-number">v1.0.2</div>
+                    <div><span class="version-type game">Game</span></div>
+                    <div class="version-date">Planned: 1 month post-launch</div>
+                </div>
+                <div class="version-changes">
+                    <strong>Patch — Balance & Bug Fixes</strong>
+                    <ul>
+                        <li>Boss difficulty adjustments (Chapter 4-6)</li>
+                        <li>Jade economy rebalancing</li>
+                        <li>Fixed Guardian Relic summon bugs</li>
+                        <li>Improved controller support</li>
+                        <li>Minor dialogue typo corrections</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="version future">
+                <div class="version-header">
+                    <div class="version-number">v1.0.1</div>
+                    <div><span class="version-type game">Game</span></div>
+                    <div class="version-date">Planned: 1 week post-launch</div>
+                </div>
+                <div class="version-changes">
+                    <strong>Day 1 Patch</strong>
+                    <ul>
+                        <li>Critical bug fixes (save corruption, crashes)</li>
+                        <li>Performance optimization</li>
+                        <li>Localization improvements</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="version future">
+                <div class="version-header">
+                    <div class="version-number">v1.0.0</div>
+                    <div><span class="version-type game">Game</span></div>
+                    <div class="version-date">Planned: Launch Day</div>
+                </div>
+                <div class="version-changes">
+                    <strong>Full Release</strong>
+                    <ul>
+                        <li>Complete 6-chapter story</li>
+                        <li>All Guardian Relics unlockable</li>
+                        <li>Base Camp fully functional</li>
+                        <li>Side quests & post-game content</li>
+                        <li>Voice acting (optional)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📋 Update Categories</h2>
+            <p style="font-size:1em;color:#555;margin:12px 0">
+                <strong style="color:var(--jade-green)">• Added:</strong> New features, content, systems<br>
+                <strong style="color:var(--celestial-blue)">• Changed:</strong> Modified existing features, balance adjustments<br>
+                <strong style="color:var(--phoenix-red)">• Removed:</strong> Deprecated features, cut content<br>
+                <strong style="color:#777">• Fixed:</strong> Bug fixes, performance improvements
+            </p>
+        </div>
+
+    </div>
+    <footer class="footer"><div class="footer-title">✦ XIAN LEGENDS ✦</div><p style="margin-top:12px;color:var(--cloud-white);opacity:0.8">Change Log • Development Planning</p><p style="margin-top:20px"><a href="../development-planning.html">← Back to Development Planning</a></p></footer>
+</body>
+</html>

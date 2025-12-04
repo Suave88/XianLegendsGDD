@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA & Testing — Xian Legends GDD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--imperial-gold:#d4af37;--jade-green:#00a86b;--celestial-blue:#3498db;--dragon-teal:#1abc9c;--mystic-purple:#9b59b6;--dark-night:#0f0f23;--cloud-white:#ecf0f1;--gold-glow:rgba(212,175,55,0.4);--font-display:'Cinzel',serif;--font-body:'Inter',sans-serif}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:var(--font-body);background:linear-gradient(135deg,#0f0f23 0%,#1a1a2e 50%,#16213e 100%);color:#333;line-height:1.6;font-size:16px}
+        .nav-bar{background:rgba(15,15,35,0.95);backdrop-filter:blur(10px);padding:12px 16px;position:sticky;top:0;z-index:1000;border-bottom:2px solid var(--imperial-gold)}
+        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
+        .nav-title{font-family:var(--font-display);color:var(--imperial-gold);font-size:1em}
+        .nav-back{color:white;text-decoration:none;padding:8px 14px;background:var(--celestial-blue);border-radius:6px;font-size:0.9em;font-weight:600;white-space:nowrap;transition:all 0.3s ease}
+        .nav-back:hover{background:#2980b9}
+        .header{text-align:center;padding:32px 16px 24px;background:rgba(0,0,0,0.3)}
+        .header-title{font-family:var(--font-display);font-size:clamp(1.8em,7vw,3em);color:var(--imperial-gold);margin-bottom:8px;text-shadow:0 0 30px var(--gold-glow)}
+        .header-subtitle{font-size:clamp(0.9em,3vw,1.2em);color:var(--cloud-white);opacity:0.9}
+        .container{max-width:1200px;margin:0 auto;padding:24px 16px 60px}
+        .section{background:white;border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,0.2)}
+        .section-title{font-family:var(--font-display);font-size:1.3em;color:var(--dark-night);margin-bottom:16px;padding-bottom:8px;border-bottom:3px solid var(--imperial-gold)}
+        .test-phase{background:#f8f9fa;border-left:4px solid var(--dragon-teal);padding:12px;margin:12px 0;border-radius:6px}
+        .test-phase h4{font-family:var(--font-display);font-size:1.1em;color:var(--dark-night);margin-bottom:6px}
+        .test-phase p{font-size:0.95em;color:#555;line-height:1.7}
+        p{font-size:1em;color:#555;line-height:1.7;margin:12px 0}
+        strong{color:var(--celestial-blue)}
+        .footer{text-align:center;padding:32px 16px;border-top:2px solid rgba(155,89,182,0.3);margin-top:40px;background:rgba(0,0,0,0.2)}
+        .footer-title{font-family:var(--font-display);color:var(--imperial-gold);font-size:1.3em;margin-bottom:12px}
+        .footer a{color:var(--celestial-blue);text-decoration:none}
+        @media (min-width:600px){.section{padding:32px}}
+    </style>
+</head>
+<body>
+    <nav class="nav-bar"><div class="nav-container"><div class="nav-title">QA & Testing</div><a href="../development-planning.html" class="nav-back">← Development Planning</a></div></nav>
+    <header class="header"><h1 class="header-title">QA & Testing</h1><p class="header-subtitle">Quality Assurance Protocol</p></header>
+    <div class="container">
+
+        <div class="section">
+            <h2 class="section-title">🧪 Testing Phases</h2>
+            
+            <div class="test-phase"><h4>Phase 1-2: Internal Testing</h4><p><strong>Focus:</strong> Core systems, combat mechanics, plugin stability<br><strong>Who:</strong> Dev team only<br><strong>Goal:</strong> Catch critical bugs early, validate mechanics work</p></div>
+            
+            <div class="test-phase"><h4>Phase 3-4: Alpha Testing</h4><p><strong>Focus:</strong> Gameplay balance, story flow, Base Camp features<br><strong>Who:</strong> Dev team + 2-3 trusted friends<br><strong>Goal:</strong> First impressions, pacing feedback, major bugs</p></div>
+            
+            <div class="test-phase"><h4>Phase 5: Beta Testing</h4><p><strong>Focus:</strong> Full playthrough, all systems, final polish<br><strong>Who:</strong> 5-10 external playtesters<br><strong>Goal:</strong> Comprehensive bug hunting, balance refinement, UX feedback</p></div>
+            
+            <div class="test-phase"><h4>Phase 6: Release Candidate</h4><p><strong>Focus:</strong> Critical bugs only, stability testing<br><strong>Who:</strong> Dev team final pass<br><strong>Goal:</strong> Ensure launch-ready build with no game-breaking issues</p></div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📋 Testing Checklist</h2>
+            <p><strong>Combat:</strong> All skills work, grid positioning accurate, Guardian summons function</p>
+            <p><strong>Progression:</strong> Jade economy balanced, cultivation accessible, skill unlocks work</p>
+            <p><strong>Story:</strong> No dialogue typos, cutscenes trigger correctly, choices tracked</p>
+            <p><strong>Base Camp:</strong> Furniture placement smooth, bonding scenes trigger, buffs apply</p>
+            <p><strong>Performance:</strong> No crashes, stable framerate, fast load times</p>
+            <p><strong>Accessibility:</strong> Readable text, controller support, save system reliable</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🐛 Bug Tracking</h2>
+            <p><strong>Tool:</strong> GitHub Issues or Trello board</p>
+            <p><strong>Priority Levels:</strong></p>
+            <p>• Critical (game-breaking, blocks progress)</p>
+            <p>• High (major features broken, immersion-breaking)</p>
+            <p>• Medium (minor bugs, polish issues)</p>
+            <p>• Low (cosmetic, nice-to-have fixes)</p>
+            <p><strong>Response Time:</strong> Critical bugs fixed within 24 hours, High within 1 week</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📊 Feedback Collection</h2>
+            <p><strong>Surveys:</strong> Post-playthrough questionnaire (Google Forms)</p>
+            <p><strong>Discord:</strong> Private beta tester channel for real-time feedback</p>
+            <p><strong>Playtesting Sessions:</strong> Watch-along streams to observe player behavior</p>
+            <p><strong>Metrics:</strong> Average playtime, completion rate, drop-off points</p>
+        </div>
+
+    </div>
+    <footer class="footer"><div class="footer-title">✦ XIAN LEGENDS ✦</div><p style="margin-top:12px;color:var(--cloud-white);opacity:0.8">QA & Testing • Development Planning</p><p style="margin-top:20px"><a href="../development-planning.html">← Back to Development Planning</a></p></footer>
+</body>
+</html>

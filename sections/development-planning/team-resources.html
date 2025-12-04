@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team & Resources — Xian Legends GDD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--imperial-gold:#d4af37;--jade-green:#00a86b;--celestial-blue:#3498db;--mystic-purple:#9b59b6;--dark-night:#0f0f23;--cloud-white:#ecf0f1;--gold-glow:rgba(212,175,55,0.4);--font-display:'Cinzel',serif;--font-body:'Inter',sans-serif}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:var(--font-body);background:linear-gradient(135deg,#0f0f23 0%,#1a1a2e 50%,#16213e 100%);color:#333;line-height:1.6;font-size:16px}
+        .nav-bar{background:rgba(15,15,35,0.95);backdrop-filter:blur(10px);padding:12px 16px;position:sticky;top:0;z-index:1000;border-bottom:2px solid var(--imperial-gold)}
+        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
+        .nav-title{font-family:var(--font-display);color:var(--imperial-gold);font-size:1em}
+        .nav-back{color:white;text-decoration:none;padding:8px 14px;background:var(--celestial-blue);border-radius:6px;font-size:0.9em;font-weight:600;white-space:nowrap;transition:all 0.3s ease}
+        .nav-back:hover{background:#2980b9}
+        .header{text-align:center;padding:32px 16px 24px;background:rgba(0,0,0,0.3)}
+        .header-title{font-family:var(--font-display);font-size:clamp(1.8em,7vw,3em);color:var(--imperial-gold);margin-bottom:8px;text-shadow:0 0 30px var(--gold-glow)}
+        .header-subtitle{font-size:clamp(0.9em,3vw,1.2em);color:var(--cloud-white);opacity:0.9}
+        .container{max-width:1200px;margin:0 auto;padding:24px 16px 60px}
+        .section{background:white;border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,0.2)}
+        .section-title{font-family:var(--font-display);font-size:1.3em;color:var(--dark-night);margin-bottom:16px;padding-bottom:8px;border-bottom:3px solid var(--imperial-gold)}
+        .role{background:#f8f9fa;border-left:4px solid var(--jade-green);padding:12px;margin:12px 0;border-radius:6px}
+        .role h4{font-family:var(--font-display);font-size:1.1em;color:var(--dark-night);margin-bottom:6px}
+        .role p{font-size:0.95em;color:#555;line-height:1.7}
+        p{font-size:1em;color:#555;line-height:1.7;margin:12px 0}
+        .highlight{background:rgba(212,175,55,0.1);border-left:4px solid var(--imperial-gold);padding:12px;margin:12px 0;border-radius:6px}
+        strong{color:var(--celestial-blue)}
+        .footer{text-align:center;padding:32px 16px;border-top:2px solid rgba(155,89,182,0.3);margin-top:40px;background:rgba(0,0,0,0.2)}
+        .footer-title{font-family:var(--font-display);color:var(--imperial-gold);font-size:1.3em;margin-bottom:12px}
+        .footer a{color:var(--celestial-blue);text-decoration:none}
+        @media (min-width:600px){.section{padding:32px}}
+    </style>
+</head>
+<body>
+    <nav class="nav-bar"><div class="nav-container"><div class="nav-title">Team & Resources</div><a href="../development-planning.html" class="nav-back">← Development Planning</a></div></nav>
+    <header class="header"><h1 class="header-title">Team & Resources</h1><p class="header-subtitle">Required Skills & Budget</p></header>
+    <div class="container">
+
+        <div class="section">
+            <h2 class="section-title">👥 Core Team (4-5 People)</h2>
+            
+            <div class="role"><h4>Lead Developer / Programmer</h4><p><strong>Skills:</strong> RPG Maker MZ, JavaScript, plugin integration (VisuStella, SRPG Gear MZ)<br><strong>Role:</strong> Core systems, combat mechanics, plugin customization</p></div>
+            
+            <div class="role"><h4>Writer / Narrative Designer</h4><p><strong>Skills:</strong> Character writing, dialogue, JRPG storytelling<br><strong>Role:</strong> Script, character arcs, party banter (200+ conversations)</p></div>
+            
+            <div class="role"><h4>2D Artist</h4><p><strong>Skills:</strong> Character design, visual novel busts, UI/UX<br><strong>Role:</strong> Character portraits, map tilesets, promotional art</p></div>
+            
+            <div class="role"><h4>Composer / Sound Designer</h4><p><strong>Skills:</strong> JRPG music composition, adaptive soundtracks<br><strong>Role:</strong> 15-20 original tracks, sound effects, audio mixing</p></div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🔧 External Contractors</h2>
+            <p><strong>Voice Actors:</strong> 3 main characters (optional, budget-dependent)</p>
+            <p><strong>QA Testers:</strong> 5-10 external playtesters for Phase 5</p>
+            <p><strong>Marketing Specialist:</strong> Trailer editing, social media, Steam page optimization</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">💰 Budget Estimate</h2>
+            <p><strong>Team Salaries (6 months):</strong> Variable (indie scale)</p>
+            <p><strong>RPG Maker MZ License:</strong> $80 per seat (4-5 seats = $320-400)</p>
+            <p><strong>VisuStella Plugins:</strong> ~$300-500 (MZ Core Engine, Battle Core, etc.)</p>
+            <p><strong>SRPG Gear MZ:</strong> ~$50</p>
+            <p><strong>Voice Acting:</strong> $500-2,000 (if included)</p>
+            <p><strong>Marketing:</strong> $1,000-3,000 (trailer, ads, press kit)</p>
+            <div class="highlight"><strong>Total Estimated Budget:</strong> $5,000-10,000 (excluding salaries)</div>
+        </div>
+
+    </div>
+    <footer class="footer"><div class="footer-title">✦ XIAN LEGENDS ✦</div><p style="margin-top:12px;color:var(--cloud-white);opacity:0.8">Team & Resources • Development Planning</p><p style="margin-top:20px"><a href="../development-planning.html">← Back to Development Planning</a></p></footer>
+</body>
+</html>
