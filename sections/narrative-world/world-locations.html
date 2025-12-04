@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World & Locations — Xian Legends GDD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--imperial-gold:#d4af37;--celestial-blue:#3498db;--dragon-teal:#1abc9c;--dark-night:#0f0f23;--cloud-white:#ecf0f1;--gold-glow:rgba(212,175,55,0.4);--font-display:'Cinzel',serif;--font-body:'Inter',sans-serif}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:var(--font-body);background:linear-gradient(135deg,#0f0f23 0%,#1a1a2e 50%,#16213e 100%);color:#333;line-height:1.6;font-size:16px}
+        .nav-bar{background:rgba(15,15,35,0.95);backdrop-filter:blur(10px);padding:12px 16px;position:sticky;top:0;z-index:1000;border-bottom:2px solid var(--imperial-gold)}
+        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
+        .nav-title{font-family:var(--font-display);color:var(--imperial-gold);font-size:1em}
+        .nav-back{color:white;text-decoration:none;padding:8px 14px;background:var(--celestial-blue);border-radius:6px;font-size:0.9em;font-weight:600;white-space:nowrap;transition:all 0.3s ease}
+        .nav-back:hover{background:#2980b9}
+        .header{text-align:center;padding:32px 16px 24px;background:rgba(0,0,0,0.3)}
+        .header-title{font-family:var(--font-display);font-size:clamp(1.8em,7vw,3em);color:var(--imperial-gold);margin-bottom:8px;text-shadow:0 0 30px var(--gold-glow)}
+        .header-subtitle{font-size:clamp(0.9em,3vw,1.2em);color:var(--cloud-white);opacity:0.9}
+        .container{max-width:1200px;margin:0 auto;padding:24px 16px 60px}
+        .loc{background:white;border-radius:12px;padding:16px;margin-bottom:16px;box-shadow:0 4px 20px rgba(0,0,0,0.2);border-left:4px solid var(--dragon-teal)}
+        .loc-header{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+        .loc-icon{font-size:1.8em}
+        .loc-title{font-family:var(--font-display);font-size:1.2em;color:var(--dark-night)}
+        .loc-desc{font-size:0.95em;color:#555;line-height:1.6}
+        .footer{text-align:center;padding:32px 16px;border-top:2px solid rgba(212,175,55,0.3);margin-top:40px;background:rgba(0,0,0,0.2)}
+        .footer-title{font-family:var(--font-display);color:var(--imperial-gold);font-size:1.3em;margin-bottom:12px}
+        .footer a{color:var(--celestial-blue);text-decoration:none}
+        @media (min-width:600px){.loc{padding:24px}}
+    </style>
+</head>
+<body>
+    <nav class="nav-bar"><div class="nav-container"><div class="nav-title">World & Locations</div><a href="../narrative-world.html" class="nav-back">← Narrative & World</a></div></nav>
+    <header class="header"><h1 class="header-title">World & Locations</h1><p class="header-subtitle">12 Locations Across Xian</p></header>
+    <div class="container">
+
+        <div class="loc"><div class="loc-header"><div class="loc-icon">🏡</div><h3 class="loc-title">Wunan Village</h3></div><p class="loc-desc">Starting village. Mion's home with Uncle Hendrik. Peaceful farming community, tutorial area.</p></div>
+
+        <div class="loc"><div class="loc-header"><div class="loc-icon">🌲</div><h3 class="loc-title">Green Forest</h3></div><p class="loc-desc">Where Ayane awakens. Ancient trees, crystal formations, first Guardian Relic discovery.</p></div>
+
+        <div class="loc"><div class="loc-header"><div class="loc-icon">⛰️</div><h3 class="loc-title">Mount Stellaris</h3></div><p class="loc-desc">Sacred mountain. Home to Qinglong (Azure Dragon). First major combat trial location.</p></div>
+
+        <div class="loc"><div class="loc-header"><div class="loc-icon">🏜️</div><h3 class="loc-title">Mirage Desert</h3></div><p class="loc-desc">Vast desert with shifting sands. Baihu (White Tiger) Guardian. Meet Hassan the guide.</p></div>
+
+        <div class="loc"><div class="loc-header"><div class="loc-icon">⚓</div><h3 class="loc-title">Thames Port</h3></div><p class="loc-desc">Bustling port city. Setsuna's hometown. Base for sea travel, meet Captain Rachel.</p></div>
+
+        <div class="loc"><div class="loc-header"><div class="loc-icon">🏝️</div><h3 class="loc-title">Azmat Island</h3></div><p class="loc-desc">Tropical island with ancient ruins. Zhuque (Vermillion Bird) Guardian. Historical revelations.</p></div>
+
+        <div class="loc"><div class="loc-header"><div class="loc-icon">🏰</div><h3 class="loc-title">Ambatukam Kingdom</h3></div><p class="loc-desc">Grand kingdom with libraries. Xuanwu (Black Tortoise) Guardian. Final Memory Crystal.</p></div>
+
+        <div class="loc"><div class="loc-header"><div class="loc-icon">☁️</div><h3 class="loc-title">Solaris Capital</h3></div><p class="loc-desc">Sky-high capital city. Final dungeon, confrontation with Soleil and Cartelina.</p></div>
+
+        <div class="loc"><div class="loc-header"><div class="loc-icon">🏕️</div><h3 class="loc-title">Base Camp</h3></div><p class="loc-desc">Portable safe haven. Customizable, bonding moments, rest between adventures.</p></div>
+
+        <div class="loc"><div class="loc-header"><div class="loc-icon">🎋</div><h3 class="loc-title">Jade Sanctuaries</h3></div><p class="loc-desc">Meditation locations scattered across the world. Cultivation and power-up spots.</p></div>
+
+        <div class="loc"><div class="loc-header"><div class="loc-icon">🌊</div><h3 class="loc-title">The Azure Sea</h3></div><p class="loc-desc">Ocean connecting locations. Travel between continents, naval encounters.</p></div>
+
+        <div class="loc"><div class="loc-header"><div class="loc-icon">🗿</div><h3 class="loc-title">Ancient Ruins</h3></div><p class="loc-desc">Scattered Star-Weaver ruins. Lore discoveries, optional exploration content.</p></div>
+
+    </div>
+    <footer class="footer"><div class="footer-title">✦ XIAN LEGENDS ✦</div><p style="margin-top:12px;color:var(--cloud-white);opacity:0.8">World & Locations • Narrative & World</p><p style="margin-top:20px"><a href="../narrative-world.html">← Back to Narrative & World</a></p></footer>
+</body>
+</html>
