@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPG Maker Database — Xian Legends</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--imperial-gold:#d4af37;--celestial-blue:#3498db;--jade-green:#00a86b;--phoenix-red:#e74c3c;--dragon-teal:#1abc9c;--dark-night:#0f0f23;--cloud-white:#ecf0f1;--gold-glow:rgba(212,175,55,0.4);--font-display:'Cinzel',serif;--font-body:'Inter',sans-serif}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:var(--font-body);background:linear-gradient(135deg,#0f0f23 0%,#1a1a2e 50%,#16213e 100%);color:var(--cloud-white);line-height:1.6;font-size:16px}
+        .nav-bar{background:rgba(15,15,35,0.95);backdrop-filter:blur(10px);padding:12px 16px;position:sticky;top:0;z-index:1000;border-bottom:2px solid var(--imperial-gold)}
+        .nav-container{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
+        .nav-title{font-family:var(--font-display);color:var(--imperial-gold);font-size:1.1em}
+        .nav-back{color:white;text-decoration:none;padding:8px 16px;background:var(--celestial-blue);border-radius:6px;font-size:0.9em;font-weight:600;white-space:nowrap;transition:all 0.3s ease}
+        .nav-back:hover{background:#2980b9}
+        .page-header{text-align:center;padding:32px 16px 24px}
+        .page-title{font-family:var(--font-display);font-size:clamp(1.8em,8vw,3.5em);color:var(--imperial-gold);margin-bottom:8px;text-shadow:0 0 30px var(--gold-glow)}
+        .page-subtitle{font-size:clamp(0.9em,3vw,1.2em);color:var(--cloud-white);opacity:0.9}
+        .container{max-width:1400px;margin:0 auto;padding:0 12px 32px}
+        .intro-box{background:linear-gradient(135deg,rgba(212,175,55,0.12)0%,rgba(52,152,219,0.12)100%);border:2px solid var(--imperial-gold);border-radius:12px;padding:16px;margin-bottom:24px;text-align:center}
+        .intro-box h2{font-family:var(--font-display);font-size:clamp(1.2em,4vw,1.6em);color:var(--imperial-gold);margin-bottom:8px}
+        .intro-box p{font-size:clamp(0.9em,2vw,1em);opacity:0.9}
+        .card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:24px}
+        .db-card{background:linear-gradient(135deg,rgba(255,255,255,0.08)0%,rgba(255,255,255,0.03)100%);backdrop-filter:blur(10px);border-radius:12px;padding:16px;border:2px solid rgba(212,175,55,0.2);transition:all 0.3s ease;text-decoration:none;color:inherit;min-height:160px;display:flex;flex-direction:column}
+        .db-card:hover{border-color:var(--imperial-gold);transform:translateY(-3px);box-shadow:0 8px 30px rgba(212,175,55,0.25)}
+        .db-card-header{display:flex;flex-direction:column;align-items:center;gap:6px;margin-bottom:10px}
+        .db-card-icon{font-size:2em}
+        .db-card-title{font-family:var(--font-display);font-size:1em;color:var(--cloud-white);text-align:center}
+        .db-card-desc{color:rgba(255,255,255,0.75);font-size:0.85em;text-align:center;flex-grow:1}
+        .db-tag{padding:4px 10px;border-radius:12px;font-size:0.7em;font-weight:600;text-transform:uppercase;display:inline-block;margin-top:8px}
+        .db-tag.complete{background:rgba(0,168,107,0.2);color:var(--jade-green)}
+        .db-tag.tbd{background:rgba(231,76,60,0.2);color:var(--phoenix-red)}
+        .footer{text-align:center;padding:24px 16px;border-top:2px solid rgba(212,175,55,0.3);margin-top:32px}
+        .footer-title{font-family:var(--font-display);color:var(--imperial-gold);font-size:1.3em;margin-bottom:12px}
+        .footer a{color:var(--celestial-blue);text-decoration:none}
+        @media (min-width:600px){.card-grid{gap:16px}.db-card{min-height:180px;padding:20px}.db-card-header{flex-direction:row}.db-card-title{font-size:1.1em;text-align:left}.db-card-desc{text-align:left}}
+        @media (min-width:1024px){.card-grid{grid-template-columns:repeat(3,1fr);gap:20px}.db-card{min-height:200px}.db-card-icon{font-size:2.2em}}
+    </style>
+</head>
+<body>
+    <nav class="nav-bar"><div class="nav-container"><div class="nav-title">RPG Maker Database</div><a href="../gameplay-systems.html" class="nav-back">← Gameplay Systems</a></div></nav>
+    <header class="page-header"><h1 class="page-title">Complete Database</h1><p class="page-subtitle">All Game Data Reference</p></header>
+    <div class="container">
+        <div class="intro-box"><h2>7 Database Categories</h2><p>Comprehensive game data for RPG Maker MZ implementation</p></div>
+        <div class="card-grid">
+            <a href="actors-classes.html" class="db-card"><div class="db-card-header"><div class="db-card-icon">⭐</div><h3 class="db-card-title">Actors & Classes</h3></div><p class="db-card-desc">Mion, Setsuna, Ayane profiles & stats</p><span class="db-tag complete">Complete</span></a>
+            <a href="skills.html" class="db-card"><div class="db-card-header"><div class="db-card-icon">⚡</div><h3 class="db-card-title">Skills</h3></div><p class="db-card-desc">All character abilities & effects</p><span class="db-tag complete">Complete</span></a>
+            <a href="items.html" class="db-card"><div class="db-card-header"><div class="db-card-icon">🧪</div><h3 class="db-card-title">Items</h3></div><p class="db-card-desc">Consumables & quest items</p><span class="db-tag tbd">In Dev</span></a>
+            <a href="weapons.html" class="db-card"><div class="db-card-header"><div class="db-card-icon">🗡️</div><h3 class="db-card-title">Weapons</h3></div><p class="db-card-desc">Bow, Greatsword, Staff progression</p><span class="db-tag tbd">In Dev</span></a>
+            <a href="armors.html" class="db-card"><div class="db-card-header"><div class="db-card-icon">🛡️</div><h3 class="db-card-title">Armors</h3></div><p class="db-card-desc">Guardian Relics & equipment</p><span class="db-tag tbd">In Dev</span></a>
+            <a href="enemies.html" class="db-card"><div class="db-card-header"><div class="db-card-icon">👹</div><h3 class="db-card-title">Enemies</h3></div><p class="db-card-desc">Monsters & boss specifications</p><span class="db-tag tbd">In Dev</span></a>
+            <a href="states.html" class="db-card"><div class="db-card-header"><div class="db-card-icon">🔮</div><h3 class="db-card-title">States</h3></div><p class="db-card-desc">Buffs, debuffs, status effects</p><span class="db-tag tbd">In Dev</span></a>
+        </div>
+    </div>
+    <footer class="footer"><div class="footer-title">✦ XIAN LEGENDS ✦</div><p style="margin-top:16px;opacity:0.9;font-size:0.95em">RPG Maker Database • Reference Documentation</p><p style="margin-top:20px"><a href="../gameplay-systems.html">← Back to Gameplay Systems</a></p></footer>
+</body>
+</html>

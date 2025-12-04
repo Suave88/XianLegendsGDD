@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial & Onboarding — Xian Legends GDD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--imperial-gold:#d4af37;--celestial-blue:#3498db;--jade-green:#00a86b;--phoenix-red:#e74c3c;--mystic-purple:#9b59b6;--dark-night:#0f0f23;--cloud-white:#ecf0f1;--gold-glow:rgba(212,175,55,0.4);--font-display:'Cinzel',serif;--font-body:'Inter',sans-serif}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:var(--font-body);background:linear-gradient(135deg,#0f0f23 0%,#1a1a2e 50%,#16213e 100%);color:#333;line-height:1.6;font-size:16px}
+        .nav-bar{background:rgba(15,15,35,0.95);backdrop-filter:blur(10px);padding:12px 16px;position:sticky;top:0;z-index:1000;border-bottom:2px solid var(--imperial-gold)}
+        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
+        .nav-title{font-family:var(--font-display);color:var(--imperial-gold);font-size:1em}
+        .nav-back{color:white;text-decoration:none;padding:8px 14px;background:var(--celestial-blue);border-radius:6px;font-size:0.9em;font-weight:600;white-space:nowrap;transition:all 0.3s ease}
+        .nav-back:hover{background:#2980b9}
+        .header{text-align:center;padding:32px 16px 24px;background:rgba(0,0,0,0.3)}
+        .header-title{font-family:var(--font-display);font-size:clamp(1.8em,7vw,3em);color:var(--imperial-gold);margin-bottom:8px;text-shadow:0 0 30px var(--gold-glow)}
+        .header-subtitle{font-size:clamp(0.9em,3vw,1.2em);color:var(--cloud-white);opacity:0.9}
+        .container{max-width:1200px;margin:0 auto;padding:24px 16px 60px}
+        .section{background:white;border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,0.2)}
+        .section-title{font-family:var(--font-display);font-size:1.3em;color:var(--dark-night);margin-bottom:16px;padding-bottom:8px;border-bottom:3px solid var(--imperial-gold)}
+        .phase{background:#f8f9fa;border-left:4px solid var(--celestial-blue);padding:12px;margin:12px 0;border-radius:6px}
+        .phase h4{font-family:var(--font-display);font-size:1.1em;color:var(--dark-night);margin-bottom:8px}
+        .phase-list{margin-left:16px;margin-top:8px}
+        .phase-list li{font-size:0.95em;color:#555;margin:6px 0}
+        .principle{background:rgba(212,175,55,0.1);border-left:4px solid var(--imperial-gold);padding:12px;margin:12px 0;border-radius:6px}
+        .principle strong{color:var(--imperial-gold)}
+        .tip{background:rgba(0,168,107,0.1);border-left:4px solid var(--jade-green);padding:12px;margin:12px 0;border-radius:6px}
+        .tip strong{color:var(--jade-green)}
+        .footer{text-align:center;padding:32px 16px;border-top:2px solid rgba(212,175,55,0.3);margin-top:40px;background:rgba(0,0,0,0.2)}
+        .footer-title{font-family:var(--font-display);color:var(--imperial-gold);font-size:1.3em;margin-bottom:12px}
+        .footer a{color:var(--celestial-blue);text-decoration:none}
+        @media (min-width:600px){.section{padding:32px}}
+    </style>
+</head>
+<body>
+    <nav class="nav-bar"><div class="nav-container"><div class="nav-title">Tutorial & Onboarding</div><a href="../gameplay-systems.html" class="nav-back">← Gameplay Systems</a></div></nav>
+    <header class="header"><h1 class="header-title">Tutorial & Onboarding</h1><p class="header-subtitle">First 30 Minutes Design</p></header>
+    <div class="container">
+
+        <div style="background:white;border:3px solid var(--imperial-gold);border-radius:12px;padding:20px;margin-bottom:24px;box-shadow:0 4px 20px rgba(0,0,0,0.2)">
+            <h2 style="font-family:var(--font-display);font-size:1.4em;color:var(--dark-night);margin-bottom:12px;text-align:center">🎯 Onboarding Philosophy</h2>
+            <p style="text-align:center;font-size:1em;color:#333;line-height:1.7">
+                <strong>Learn by playing, not reading.</strong><br>
+                Show, don't tell. Integrate tutorials into story moments.<br>
+                Never overwhelm—introduce one concept at a time.<br>
+                <strong>Players should feel capable, not confused.</strong>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🌅 Phase 1: First 5 Minutes (Awakening)</h2>
+            <div class="phase">
+                <h4>🎬 Scene: Ayane's Crystal Awakening</h4>
+                <p style="font-size:0.95em;color:#555;margin:8px 0">Players start immediately in-game (no title screen tutorial). Ayane awakens in Green Forest, confused and alone. Natural introduction through story.</p>
+            </div>
+            <div class="phase">
+                <h4>Teaching Movement</h4>
+                <ul class="phase-list">
+                    <li><strong>Visual prompt:</strong> Glowing objective marker shows where to walk</li>
+                    <li><strong>Input hint:</strong> Small, non-intrusive UI shows WASD/joystick (fades after use)</li>
+                    <li><strong>Contextual:</strong> "Move toward the light" appears in dialogue, not UI box</li>
+                    <li><strong>Immediate feedback:</strong> Camera smoothly follows, particles trail behind character</li>
+                </ul>
+            </div>
+            <div class="tip"><strong>Mobile UX:</strong> Virtual joystick appears automatically with pulsing animation. Disappears after first successful movement.</div>
+            <div class="phase">
+                <h4>Teaching Interaction</h4>
+                <ul class="phase-list">
+                    <li>Ayane finds a glowing Memory Fragment</li>
+                    <li>Prompt appears only when close: "Press [SPACE] to examine"</li>
+                    <li>First interaction triggers brief cutscene revealing memory flashback</li>
+                </ul>
+            </div>
+            <div class="principle"><strong>Goal:</strong> Within 5 minutes, players understand movement, interaction, and are emotionally invested in Ayane's mystery.</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">⚔️ Phase 2: Minutes 5-15 (First Encounter)</h2>
+            <div class="phase">
+                <h4>🎬 Scene: Meeting Mion & Setsuna</h4>
+                <p style="font-size:0.95em;color:#555;margin:8px 0">After wandering deeper, Ayane encounters two travelers—Mion Chen and Setsuna Torres. They're exploring the forest and offer to help. First social bond moment.</p>
+            </div>
+            <div class="phase">
+                <h4>Teaching Dialogue & Choices</h4>
+                <ul class="phase-list">
+                    <li><strong>Dialogue wheel:</strong> 2-3 response options appear (mobile: large tap targets)</li>
+                    <li><strong>No "wrong" answers:</strong> All choices lead to friendship (theme reinforcement)</li>
+                    <li><strong>Character portraits:</strong> Expressive anime art shows emotions clearly</li>
+                    <li><strong>Skip option:</strong> Hold to fast-forward for returning players</li>
+                </ul>
+            </div>
+            <div class="phase">
+                <h4>First Combat Tutorial</h4>
+                <ul class="phase-list">
+                    <li>Hostile creature appears—first battle is scripted, cannot lose</li>
+                    <li><strong>Grid explanation:</strong> "Tap cells to move. Enemies can't reach you from here!"</li>
+                    <li><strong>Skill introduction:</strong> "Try Mion's 'Strategic Strike' skill (tap icon)"</li>
+                    <li><strong>Combo hint:</strong> "Setsuna can protect allies—place her in front!"</li>
+                    <li>Battle won automatically after 2-3 turns, even if player makes mistakes</li>
+                </ul>
+            </div>
+            <div class="tip"><strong>Mobile UX:</strong> Drag-and-drop character placement. Large skill buttons (60px). Grid cells highlight valid moves in green.</div>
+            <div class="principle"><strong>Goal:</strong> Players understand combat basics, meet the trio, and feel a spark of friendship forming.</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🎯 Phase 3: Minutes 15-30 (Tutorial Complete)</h2>
+            <div class="phase">
+                <h4>🎬 Scene: Journey to Wunan Village</h4>
+                <p style="font-size:0.95em;color:#555;margin:8px 0">The trio decides to travel together to Wunan Village. On the way, players practice all core mechanics in real situations.</p>
+            </div>
+            <div class="phase">
+                <h4>Combat Refinement</h4>
+                <ul class="phase-list">
+                    <li><strong>Real battle:</strong> 3 enemies, player must actually think tactically</li>
+                    <li><strong>Celestial Blessing introduced:</strong> "Your friendship makes you stronger together!"</li>
+                    <li><strong>Guardian Relic teaser:</strong> Mion mentions legends of Four Guardians</li>
+                    <li>Post-battle rewards: Jade currency, experience points, tutorial on leveling</li>
+                </ul>
+            </div>
+            <div class="phase">
+                <h4>Exploration & Activities</h4>
+                <ul class="phase-list">
+                    <li><strong>Treasure chest:</strong> "Press [E] to open" → First consumable items</li>
+                    <li><strong>Cooking introduction:</strong> Rest at campfire, simple cooking minigame</li>
+                    <li><strong>Character bonding:</strong> Short dialogue scene showing personalities</li>
+                    <li><strong>Map system:</strong> "Press [M] to see where we're going"</li>
+                </ul>
+            </div>
+            <div class="phase">
+                <h4>Base Camp Preview</h4>
+                <ul class="phase-list">
+                    <li>Arrive at Wunan Village—safe hub area</li>
+                    <li><strong>Uncle Hendrik:</strong> Friendly NPC explains village services</li>
+                    <li><strong>Save point:</strong> "Rest here to save your progress"</li>
+                    <li><strong>Shop tutorial:</strong> "Spend Jade on supplies for your journey"</li>
+                    <li><strong>Quest board:</strong> Optional side quests available (not mandatory)</li>
+                </ul>
+            </div>
+            <div class="tip"><strong>Mobile UX:</strong> Bottom navigation bar introduced with all 5 core menu functions. Quick tutorial on swipe gestures.</div>
+            <div class="principle"><strong>Goal:</strong> By minute 30, players understand ALL core systems and are ready for the full adventure.</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📚 Progressive Tutorial System</h2>
+            <div class="phase">
+                <h4>Advanced Features (Introduced Later)</h4>
+                <ul class="phase-list">
+                    <li><strong>Chapter 2:</strong> Guardian Relics unlocked (first Guardian: Qinglong)</li>
+                    <li><strong>Chapter 3:</strong> Cultivation system explained at Jade Sanctuary</li>
+                    <li><strong>Chapter 4:</strong> Base Camp customization unlocked</li>
+                    <li><strong>Chapter 5:</strong> Advanced combat tactics (zone effects, combos)</li>
+                    <li><strong>Chapter 6:</strong> Full power—all systems mastered</li>
+                </ul>
+            </div>
+            <div class="principle"><strong>Design Pattern:</strong> Each chapter introduces 1-2 new mechanics naturally through story progression. Never dump everything at once.</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🎮 Tutorial Best Practices</h2>
+            <div class="phase">
+                <h4>DO's ✅</h4>
+                <ul class="phase-list">
+                    <li><strong>Show, don't tell:</strong> Animate the action, then let players try</li>
+                    <li><strong>Contextual prompts:</strong> Hints appear only when needed</li>
+                    <li><strong>Forgiving first battles:</strong> Early fights cannot be lost</li>
+                    <li><strong>Immediate rewards:</strong> Every tutorial action gives positive feedback</li>
+                    <li><strong>Skip option:</strong> For returning players or experts</li>
+                    <li><strong>Integrated into story:</strong> No "training room" disconnected from narrative</li>
+                </ul>
+            </div>
+            <div class="phase">
+                <h4>DON'T's ❌</h4>
+                <ul class="phase-list">
+                    <li><strong>No text walls:</strong> Never show 3+ paragraphs of instruction</li>
+                    <li><strong>No pop-up spam:</strong> One tutorial prompt at a time</li>
+                    <li><strong>No "read the manual":</strong> Everything learnable through play</li>
+                    <li><strong>No punishment for learning:</strong> Mistakes are encouraged early on</li>
+                    <li><strong>No mandatory grinding:</strong> First 30 minutes is story-focused</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📱 Mobile-Specific Tutorial</h2>
+            <div class="phase">
+                <h4>Touch Controls Introduction</h4>
+                <ul class="phase-list">
+                    <li><strong>Gesture tutorial:</strong> Animated hand shows swipe directions</li>
+                    <li><strong>Virtual joystick:</strong> Pulsing circle guides first movement</li>
+                    <li><strong>Tap vs Hold:</strong> Clear visual feedback for different inputs</li>
+                    <li><strong>Two-finger gestures:</strong> Explained only when camera rotation needed</li>
+                    <li><strong>Button customization:</strong> "Uncomfortable? Adjust in settings!" prompt</li>
+                </ul>
+            </div>
+            <div class="tip"><strong>Adaptive UI:</strong> Detects screen size and adjusts button placement automatically. Suggests left-handed mode if available.</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">♿ Accessibility in Tutorials</h2>
+            <div class="phase">
+                <h4>Inclusive Onboarding</h4>
+                <ul class="phase-list">
+                    <li><strong>Difficulty options:</strong> "Story Mode" for relaxed play, "Tactical Mode" for challenge</li>
+                    <li><strong>Text-to-speech:</strong> All tutorial prompts can be read aloud</li>
+                    <li><strong>Adjustable speed:</strong> Combat speed can be slowed for learning</li>
+                    <li><strong>Color-blind support:</strong> Grid cells use icons + colors</li>
+                    <li><strong>Repeated prompts:</strong> Tutorial hints re-appear if player seems stuck</li>
+                    <li><strong>Auto-confirm option:</strong> Reduces required button presses</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="background:white;border:3px solid var(--jade-green);border-radius:12px;padding:20px;margin:24px 0;box-shadow:0 4px 20px rgba(0,0,0,0.2)">
+            <h2 style="font-family:var(--font-display);font-size:1.4em;color:var(--dark-night);margin-bottom:12px;text-align:center">✨ Help System (Post-Tutorial)</h2>
+            <p style="text-align:center;font-size:1em;color:#333;line-height:1.7;margin-bottom:12px">
+                <strong>Always available, never intrusive</strong>
+            </p>
+            <div style="background:#f8f9fa;padding:12px;border-radius:6px;margin-top:12px">
+                <p style="font-size:0.95em;color:#555;margin:6px 0"><strong>🔍 In-Game Encyclopedia:</strong> Searchable database of all mechanics</p>
+                <p style="font-size:0.95em;color:#555;margin:6px 0"><strong>💡 Contextual Hints:</strong> Optional prompts when player seems confused</p>
+                <p style="font-size:0.95em;color:#555;margin:6px 0"><strong>🎥 Video Tutorials:</strong> Short clips demonstrating advanced tactics</p>
+                <p style="font-size:0.95em;color:#555;margin:6px 0"><strong>📞 Support Access:</strong> Direct link to FAQ and community forums</p>
+            </div>
+        </div>
+
+        <div style="background:white;border:3px solid var(--mystic-purple);border-radius:12px;padding:20px;margin:24px 0;box-shadow:0 4px 20px rgba(0,0,0,0.2)">
+            <h2 style="font-family:var(--font-display);font-size:1.4em;color:var(--dark-night);margin-bottom:12px;text-align:center">🎯 Success Metrics</h2>
+            <p style="text-align:center;font-size:1em;color:#333;line-height:1.7">
+                <strong>Tutorial is successful if:</strong><br>
+                • 80%+ of players complete first battle<br>
+                • 70%+ reach Wunan Village (30-min mark)<br>
+                • <5% skip tutorial (means it's engaging!)<br>
+                • Positive sentiment in reviews: "easy to learn"
+            </p>
+        </div>
+
+    </div>
+    <footer class="footer"><div class="footer-title">✦ XIAN LEGENDS ✦</div><p style="margin-top:12px;color:var(--cloud-white);opacity:0.8">Tutorial & Onboarding • Gameplay Systems</p><p style="margin-top:20px"><a href="../gameplay-systems.html">← Back to Gameplay Systems</a></p></footer>
+</body>
+</html>

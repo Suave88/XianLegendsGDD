@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Controls — Xian Legends GDD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--imperial-gold:#d4af37;--celestial-blue:#3498db;--jade-green:#00a86b;--phoenix-red:#e74c3c;--dragon-teal:#1abc9c;--dark-night:#0f0f23;--cloud-white:#ecf0f1;--gold-glow:rgba(212,175,55,0.4);--font-display:'Cinzel',serif;--font-body:'Inter',sans-serif}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:var(--font-body);background:linear-gradient(135deg,#0f0f23 0%,#1a1a2e 50%,#16213e 100%);color:#333;line-height:1.6;font-size:16px}
+        .nav-bar{background:rgba(15,15,35,0.95);backdrop-filter:blur(10px);padding:12px 16px;position:sticky;top:0;z-index:1000;border-bottom:2px solid var(--imperial-gold)}
+        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
+        .nav-title{font-family:var(--font-display);color:var(--imperial-gold);font-size:1em}
+        .nav-back{color:white;text-decoration:none;padding:8px 14px;background:var(--celestial-blue);border-radius:6px;font-size:0.9em;font-weight:600;white-space:nowrap;transition:all 0.3s ease}
+        .nav-back:hover{background:#2980b9}
+        .header{text-align:center;padding:32px 16px 24px;background:rgba(0,0,0,0.3)}
+        .header-title{font-family:var(--font-display);font-size:clamp(1.8em,7vw,3em);color:var(--imperial-gold);margin-bottom:8px;text-shadow:0 0 30px var(--gold-glow)}
+        .header-subtitle{font-size:clamp(0.9em,3vw,1.2em);color:var(--cloud-white);opacity:0.9}
+        .container{max-width:1200px;margin:0 auto;padding:24px 16px 60px}
+        .section{background:white;border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,0.2)}
+        .section-title{font-family:var(--font-display);font-size:1.3em;color:var(--dark-night);margin-bottom:16px;padding-bottom:8px;border-bottom:3px solid var(--imperial-gold)}
+        .control-group{background:#f8f9fa;border-left:4px solid var(--celestial-blue);padding:12px;margin:12px 0;border-radius:6px}
+        .control-group h4{font-family:var(--font-display);font-size:1.1em;color:var(--dark-night);margin-bottom:8px}
+        .control-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #e0e0e0}
+        .control-row:last-child{border-bottom:none}
+        .control-input{font-weight:600;color:var(--celestial-blue);font-size:0.9em;font-family:monospace;background:rgba(52,152,219,0.1);padding:3px 8px;border-radius:4px}
+        .control-action{color:#555;font-size:0.95em}
+        .principle{background:rgba(212,175,55,0.1);border-left:4px solid var(--imperial-gold);padding:12px;margin:12px 0;border-radius:6px}
+        .principle strong{color:var(--imperial-gold)}
+        .footer{text-align:center;padding:32px 16px;border-top:2px solid rgba(212,175,55,0.3);margin-top:40px;background:rgba(0,0,0,0.2)}
+        .footer-title{font-family:var(--font-display);color:var(--imperial-gold);font-size:1.3em;margin-bottom:12px}
+        .footer a{color:var(--celestial-blue);text-decoration:none}
+        @media (min-width:600px){.section{padding:32px}.control-row{padding:8px 0}}
+    </style>
+</head>
+<body>
+    <nav class="nav-bar"><div class="nav-container"><div class="nav-title">UI Controls</div><a href="../gameplay-systems.html" class="nav-back">← Gameplay Systems</a></div></nav>
+    <header class="header"><h1 class="header-title">UI Controls</h1><p class="header-subtitle">Intuitive Input Design</p></header>
+    <div class="container">
+
+        <div style="background:white;border:3px solid var(--imperial-gold);border-radius:12px;padding:20px;margin-bottom:24px;box-shadow:0 4px 20px rgba(0,0,0,0.2)">
+            <h2 style="font-family:var(--font-display);font-size:1.4em;color:var(--dark-night);margin-bottom:12px;text-align:center">🎮 Design Principles</h2>
+            <p style="text-align:center;font-size:1em;color:#333;line-height:1.7">
+                <strong>Mobile-first approach:</strong> Every control works perfectly on touch screens.<br>
+                <strong>Contextual UI:</strong> Only show what players need, when they need it.<br>
+                <strong>One-handed play:</strong> Important actions within thumb reach.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🎯 Exploration Controls</h2>
+            <div class="control-group">
+                <h4>Movement & Camera</h4>
+                <div class="control-row">
+                    <span class="control-action">Move Character</span>
+                    <span class="control-input">WASD / Arrow Keys / Joystick</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Sprint</span>
+                    <span class="control-input">Hold SHIFT / Double-tap direction</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Interact</span>
+                    <span class="control-input">SPACE / E / Tap object</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Rotate Camera</span>
+                    <span class="control-input">Q/E / Two-finger swipe</span>
+                </div>
+            </div>
+            <div class="principle"><strong>Mobile UX:</strong> Virtual joystick bottom-left, action buttons bottom-right. Sprint auto-triggers at full joystick extension.</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">⚔️ Combat Controls</h2>
+            <div class="control-group">
+                <h4>Battle Grid Navigation</h4>
+                <div class="control-row">
+                    <span class="control-action">Select Grid Cell</span>
+                    <span class="control-input">Click / Tap / Arrow Keys</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Select Skill</span>
+                    <span class="control-input">Number Keys (1-4) / Skill Icons</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Confirm Action</span>
+                    <span class="control-input">ENTER / SPACE / Tap Confirm</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Cancel Action</span>
+                    <span class="control-input">ESC / Backspace / Tap Cancel</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Fast Forward</span>
+                    <span class="control-input">Hold CTRL / Long-press screen</span>
+                </div>
+            </div>
+            <div class="control-group">
+                <h4>Guardian Relics</h4>
+                <div class="control-row">
+                    <span class="control-action">Open Guardian Menu</span>
+                    <span class="control-input">G / Guardian Icon</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Quick Summon (Last Used)</span>
+                    <span class="control-input">R / Swipe up from bottom</span>
+                </div>
+            </div>
+            <div class="principle"><strong>Mobile UX:</strong> Large touch targets (60px minimum). Drag-and-drop skill placement. Swipe gestures for quick actions.</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">📱 Menu Navigation</h2>
+            <div class="control-group">
+                <h4>Main Menu</h4>
+                <div class="control-row">
+                    <span class="control-action">Open Menu</span>
+                    <span class="control-input">ESC / Menu Icon</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Quick Access Menu</span>
+                    <span class="control-input">TAB / Swipe from left edge</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Character Status</span>
+                    <span class="control-input">C / Character Icon</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Inventory</span>
+                    <span class="control-input">I / Bag Icon</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Map</span>
+                    <span class="control-input">M / Map Icon</span>
+                </div>
+            </div>
+            <div class="principle"><strong>Mobile UX:</strong> Bottom navigation bar with 5 core functions. Swipe gestures for quick access. Hamburger menu for secondary options.</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🏡 Base Camp Controls</h2>
+            <div class="control-group">
+                <h4>Cozy Interactions</h4>
+                <div class="control-row">
+                    <span class="control-action">Place Furniture</span>
+                    <span class="control-input">Click/Drag furniture, Tap to place</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Rotate Object</span>
+                    <span class="control-input">R / Two-finger rotate gesture</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Interact with Character</span>
+                    <span class="control-input">Tap character / Press E</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Start Activity (Cook/Garden)</span>
+                    <span class="control-input">Tap activity spot / Press SPACE</span>
+                </div>
+            </div>
+            <div class="principle"><strong>Mobile UX:</strong> Pinch-to-zoom for decoration. Drag-and-drop furniture placement. Tap characters for dialogue wheels.</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🎨 Accessibility Features</h2>
+            <div class="control-group">
+                <h4>Customization Options</h4>
+                <div class="control-row">
+                    <span class="control-action">Remap Controls</span>
+                    <span class="control-input">All keys/buttons remappable</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Virtual Joystick Position</span>
+                    <span class="control-input">Adjustable left/right placement</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Button Size</span>
+                    <span class="control-input">Small / Medium / Large / Extra Large</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Opacity</span>
+                    <span class="control-input">20% - 100% adjustable</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Auto-Confirm Actions</span>
+                    <span class="control-input">Toggle on/off for faster play</span>
+                </div>
+            </div>
+            <div class="principle"><strong>Inclusive Design:</strong> Support for colorblind modes, text-to-speech, adjustable text size, and hold-duration settings.</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">⚡ Quick Actions & Shortcuts</h2>
+            <div class="control-group">
+                <h4>Power User Features</h4>
+                <div class="control-row">
+                    <span class="control-action">Quick Save</span>
+                    <span class="control-input">F5 / Double-tap menu icon</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Quick Load</span>
+                    <span class="control-input">F9 / Hold menu icon</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Screenshot</span>
+                    <span class="control-input">F12 / Volume Up + Power (mobile)</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Toggle UI Visibility</span>
+                    <span class="control-input">H / Three-finger tap</span>
+                </div>
+                <div class="control-row">
+                    <span class="control-action">Skip Dialogue</span>
+                    <span class="control-input">Hold CTRL / Hold anywhere on screen</span>
+                </div>
+            </div>
+        </div>
+
+        <div style="background:white;border:3px solid var(--jade-green);border-radius:12px;padding:20px;margin:24px 0;box-shadow:0 4px 20px rgba(0,0,0,0.2)">
+            <h2 style="font-family:var(--font-display);font-size:1.4em;color:var(--dark-night);margin-bottom:12px;text-align:center">✨ Controller Support</h2>
+            <p style="text-align:center;font-size:1em;color:#333;line-height:1.7;margin-bottom:12px">
+                <strong>Full gamepad support</strong> for Xbox, PlayStation, Nintendo Switch Pro controllers
+            </p>
+            <div style="background:#f8f9fa;padding:12px;border-radius:6px;margin-top:12px">
+                <div style="display:flex;justify-content:space-between;padding:6px 0">
+                    <span style="color:#555">Movement:</span>
+                    <span style="font-weight:600;color:var(--celestial-blue)">Left Stick</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;padding:6px 0">
+                    <span style="color:#555">Camera:</span>
+                    <span style="font-weight:600;color:var(--celestial-blue)">Right Stick</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;padding:6px 0">
+                    <span style="color:#555">Confirm:</span>
+                    <span style="font-weight:600;color:var(--celestial-blue)">A / Cross</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;padding:6px 0">
+                    <span style="color:#555">Cancel:</span>
+                    <span style="font-weight:600;color:var(--celestial-blue)">B / Circle</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;padding:6px 0">
+                    <span style="color:#555">Menu:</span>
+                    <span style="font-weight:600;color:var(--celestial-blue)">Start</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;padding:6px 0">
+                    <span style="color:#555">Quick Menu:</span>
+                    <span style="font-weight:600;color:var(--celestial-blue)">Select / Share</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer class="footer"><div class="footer-title">✦ XIAN LEGENDS ✦</div><p style="margin-top:12px;color:var(--cloud-white);opacity:0.8">UI Controls • Gameplay Systems</p><p style="margin-top:20px"><a href="../gameplay-systems.html">← Back to Gameplay Systems</a></p></footer>
+</body>
+</html>

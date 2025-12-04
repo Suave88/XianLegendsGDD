@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultivation & Economy — Xian Legends GDD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root{--imperial-gold:#d4af37;--jade-green:#00a86b;--celestial-blue:#3498db;--mystic-purple:#9b59b6;--dark-night:#0f0f23;--cloud-white:#ecf0f1;--gold-glow:rgba(212,175,55,0.4);--font-display:'Cinzel',serif;--font-body:'Inter',sans-serif}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:var(--font-body);background:linear-gradient(135deg,#0f0f23 0%,#1a1a2e 50%,#16213e 100%);color:#333;line-height:1.6;font-size:16px}
+        .nav-bar{background:rgba(15,15,35,0.95);backdrop-filter:blur(10px);padding:12px 16px;position:sticky;top:0;z-index:1000;border-bottom:2px solid var(--imperial-gold)}
+        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px}
+        .nav-title{font-family:var(--font-display);color:var(--imperial-gold);font-size:1em}
+        .nav-back{color:white;text-decoration:none;padding:8px 14px;background:var(--celestial-blue);border-radius:6px;font-size:0.9em;font-weight:600;white-space:nowrap;transition:all 0.3s ease}
+        .nav-back:hover{background:#2980b9}
+        .header{text-align:center;padding:32px 16px 24px;background:rgba(0,0,0,0.3)}
+        .header-title{font-family:var(--font-display);font-size:clamp(1.8em,7vw,3em);color:var(--imperial-gold);margin-bottom:8px;text-shadow:0 0 30px var(--gold-glow)}
+        .header-subtitle{font-size:clamp(0.9em,3vw,1.2em);color:var(--cloud-white);opacity:0.9}
+        .container{max-width:1200px;margin:0 auto;padding:24px 16px 60px}
+        .section{background:white;border-radius:12px;padding:20px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,0.2)}
+        .section-title{font-family:var(--font-display);font-size:1.3em;color:var(--dark-night);margin-bottom:16px;padding-bottom:8px;border-bottom:3px solid var(--imperial-gold)}
+        p{font-size:1em;color:#555;line-height:1.7;margin:12px 0}
+        .highlight{background:rgba(212,175,55,0.1);border-left:4px solid var(--imperial-gold);padding:12px;margin:12px 0;border-radius:6px}
+        strong{color:var(--celestial-blue)}
+        .footer{text-align:center;padding:32px 16px;border-top:2px solid rgba(212,175,55,0.3);margin-top:40px;background:rgba(0,0,0,0.2)}
+        .footer-title{font-family:var(--font-display);color:var(--imperial-gold);font-size:1.3em;margin-bottom:12px}
+        .footer a{color:var(--celestial-blue);text-decoration:none}
+        @media (min-width:600px){.section{padding:32px}}
+    </style>
+</head>
+<body>
+    <nav class="nav-bar"><div class="nav-container"><div class="nav-title">Cultivation & Economy</div><a href="../gameplay-systems.html" class="nav-back">← Gameplay Systems</a></div></nav>
+    <header class="header"><h1 class="header-title">Cultivation & Economy</h1><p class="header-subtitle">Growth Through Friendship</p></header>
+    <div class="container">
+
+        <div class="section">
+            <h2 class="section-title">💎 Special Jade Currency</h2>
+            <p><strong>Primary currency</strong> for character progression. Earned from battles, treasure, quests. Spent at Jade Sanctuaries for cultivation.</p>
+            <div class="highlight"><strong>No Grinding:</strong> Natural progression through story. Never need to farm for resources.</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🧘 Jade Sanctuaries</h2>
+            <p>Meditation spots scattered across the world. Visit to spend Jade and improve all three heroes simultaneously.</p>
+            <p><strong>Cultivation Options:</strong></p>
+            <p>• Level Up (all heroes improve together)</p>
+            <p>• Unlock New Skills (4 skill slots per hero)</p>
+            <p>• Stat Boosts (HP, MP, Attack, Defense, Speed)</p>
+            <p>• Guardian Relic upgrades (Chapter 2+)</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🎯 Skill Loadout System</h2>
+            <p>Each hero has 4 active skill slots. Choose which skills to equip at Sanctuaries.</p>
+            <div class="highlight"><strong>Strategic Choice:</strong> Customize for upcoming challenges. Tank setup vs DPS setup vs Support setup.</div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">⚡ QTE Minigame</h2>
+            <p>Quick-time event during cultivation. Press buttons in rhythm for bonus rewards.</p>
+            <p><strong>Perfect:</strong> 150% Jade efficiency</p>
+            <p><strong>Good:</strong> 100% Jade efficiency</p>
+            <p><strong>Miss:</strong> 75% Jade efficiency</p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🏪 Economy Balance</h2>
+            <p><strong>Earning Jade:</strong></p>
+            <p>• Main battles: 100-200 Jade</p>
+            <p>• Side quests: 50-100 Jade</p>
+            <p>• Treasure chests: 25-75 Jade</p>
+            <p><strong>Spending Jade:</strong></p>
+            <p>• Level up: 150-300 Jade</p>
+            <p>• New skill: 200-400 Jade</p>
+            <p>• Stat boost: 100-200 Jade</p>
+        </div>
+
+        <div style="background:white;border:3px solid var(--jade-green);border-radius:12px;padding:20px;margin:24px 0;box-shadow:0 4px 20px rgba(0,0,0,0.2)">
+            <h2 style="font-family:var(--font-display);font-size:1.4em;color:var(--dark-night);margin-bottom:12px;text-align:center">✨ Core Principle</h2>
+            <p style="text-align:center;font-size:1em;color:#333;line-height:1.7">
+                <strong>All three heroes cultivate together.</strong><br>
+                No solo grinding. No choosing who to level.<br>
+                Friendship means growing as one.
+            </p>
+        </div>
+
+    </div>
+    <footer class="footer"><div class="footer-title">✦ XIAN LEGENDS ✦</div><p style="margin-top:12px;color:var(--cloud-white);opacity:0.8">Cultivation & Economy • Gameplay Systems</p><p style="margin-top:20px"><a href="../gameplay-systems.html">← Back to Gameplay Systems</a></p></footer>
+</body>
+</html>
